@@ -1,1 +1,21 @@
+# MediSync
 
+**Versão:** 1.0.0
+
+## 1. O Problema
+Idosos e pessoas com tratamentos contínuos frequentemente esquecem o horário ou a dosagem correta de seus medicamentos, o que pode agravar problemas de saúde.
+
+## 2. A Solução
+O MediSync é uma aplicação CLI simples que permite o cadastro rápido e a listagem de medicamentos, garantindo que o usuário tenha uma agenda clara e acessível do que precisa tomar e quando.
+
+## 3. Tecnologias Utilizadas
+- **Python 3** (Linguagem Principal)
+- **JSON** (Armazenamento de dados local)
+- **Pytest** (Testes automatizados)
+- **Ruff** (Linting e análise estática)
+- **GitHub Actions** (Integração Contínua - CI)
+
+## 4. Como Executar
+1. Clone o repositório.
+2. Instale as dependências: `pip install -r requirements.txt`
+3. Execute a aplicação: `python src/medisync.py`

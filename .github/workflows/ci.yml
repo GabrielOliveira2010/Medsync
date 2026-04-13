@@ -25,5 +25,5 @@ jobs:
     - name: Rodar Linting (Ruff)
       run: ruff check src/ tests/
       
-    - name: Rodar Testes (Pytest)
-      run: pytest tests/
+- name: Rodar Testes (Pytest)
+      run: python -m pytest tests/

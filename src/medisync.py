@@ -1,5 +1,6 @@
 import json
 import os
+import requests
 
 DB_FILE = "medicamentos.json"
 __version__ = "1.0.0" # Versionamento Semântico
@@ -25,6 +26,17 @@ def adicionar_medicamento(nome, horario, especificacao):
     dados.append({"nome": nome, "horario": horario, "especificacao": especificacao})
     salvar_dados(dados)
     return True, "Medicamento adicionado com sucesso!"
+def buscar_endereco_por_cep(cep):
+    """Busca o endereço do paciente usando a API pública ViaCEP."""
+    try:
+        resposta = requests.get(f"https://viacep.com.br/ws/{cep}/json/")
+        if resposta.status_code == 200:
+            dados = resposta.json()
+            if "erro" not in dados:
+                return f"{dados['logradouro']}, {dados['bairro']} - {dados['localidade']}/{dados['uf']}"
+    except Exception:
+        return None
+    return None
 
 def menu():
     """Interface CLI do usuário."""
@@ -54,6 +66,7 @@ def menu():
             break
         else:
             print("Opção inválida. Tente novamente.")
+            
 
 if __name__ == "__main__":
     menu()

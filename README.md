@@ -1,5 +1,7 @@
 # MediSync
 
+Acesse a aplicação online aqui: https://replit.com/@gabrielolive504/Medsync
+
 **Versão:** 1.0.0
 
 ## 1. O Problema
